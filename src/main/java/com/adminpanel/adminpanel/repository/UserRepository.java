@@ -1,0 +1,9 @@
+package com.adminpanel.adminpanel.repository;
+
+import com.adminpanel.adminpanel.model.User;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface UserRepository extends JpaRepository<User, Long> {
+
+    User findByUsername(String username);
+}
