@@ -24,4 +24,8 @@ public class User {
     @Enumerated(EnumType.STRING)
     @Column(name = "role")
     private Role role;
+
+    // We are not storing the token in the database
+    @Transient
+    private String token;
 }
